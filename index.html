@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hug</title>
+</head>
+
+<body>
+<style>
+body{background-color:#FBEFF3}
+.wrapper{position: relative;height: 90vh;}
+img{position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+	img:first-child{
+		z-index: 1;
+		width: 30%
+	}
+	img:nth-child(2) {
+            z-index: 2;
+            width: 20%;
+			top: 29%;
+			left: 50%;
+    }
+	img:nth-child(3){
+		width: 20%;
+		top:52%
+	}
+	button{position: absolute;top: 72%;left: 49.82%;transform: translate(-50%, -50%);z-index: 3;border-radius: 9px;font-family: 'Amatic SCr', cursive;font-size: 16px;padding-bottom: 3px;padding-top: 3px;background-color:antiquewhite;cursor: pointer}
+</style>
+	<div class="wrapper">
+	<div>
+	<img id="bunny" src="https://images2.imgbox.com/17/f8/0VVkr0X9_o.gif">
+	<img style="display: none" id="text" src="https://images2.imgbox.com/d4/23/cysX3Uas_o.gif">
+	<img style="display: none" id="loadingbar" src="https://images2.imgbox.com/8a/0b/RpWDY7LA_o.gif">
+	<img id="loadingtext" style="width:12%;top: 45%;left:49.5%;display: none" src="https://images2.imgbox.com/bb/16/Mlko8Wiy_o.gif">
+	<button id="button" onClick="hug()">Receive Hug</button>
+	<img id="hugf" style="width:19.5%;display: none" src="https://images2.imgbox.com/9f/5e/nNXcW5Ra_o.gif">
+	</div>
+	</div>
+	<script>
+	function pick(item,item2){
+		var images = document.getElementsByTagName('img')
+		for(i=0;i<images.length;i++){
+			 images[i].style.display = "none"
+		}
+		button.style.display ="none"
+		item.style.display = "inline"
+		item2.style.display = "inline"
+	}
+	function hug(){
+		pick(text,bunny)
+		setTimeout(function(){
+		pick(loadingbar,loadingtext)
+		},2450)
+		setTimeout(function(){
+		pick(hugf)
+		},5307)
+	}
+		
+		
+	</script>
+</body>
+</html>
